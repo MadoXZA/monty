@@ -15,7 +15,7 @@ void f_push(stack_t **head, unsigned int counter)
 			k++;
 		for (; bus.arg[k] != '\0'; k++)
 		{
-			if (bus.arg[k] > 57 | | bus.arg[k] < 48)
+			if (bus.arg[k] > 57 || bus.arg[k] < 48)
 				flag = 1; }
 		if (flag == 1)
 		{ fprintf(stderr, "L%d: usage : push integer\n", counter);
