@@ -1,4 +1,5 @@
 #include "monty.h"
+
 /**
  * f_pchar - char at top of stack prints,
  * followed by new line
@@ -19,9 +20,9 @@ void f_pchar(stack_t **head, unsigned int counter)
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	if (h->n > 127 | | h->n < 0)
+	if (h->n > 127 || h->n < 0)
 	{
-		fprintf(stderr, "L%d: cant pchar, value ot of range\n", counter)
+		fprintf(stderr, "L%d: cant pchar, value ot of range\n", counter);
 		fclose(bus.file);
 		free(bus.content);
 		exit(EXIT_FAILURE);
